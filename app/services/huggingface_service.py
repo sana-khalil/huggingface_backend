@@ -11,6 +11,7 @@ def sentiment(payload):
     try:
         print('headers', headers)
         response = requests.post(API_URL, headers=headers, json=payload)
+        print('response', response)
         response.raise_for_status()  # Raise an error for bad responses
         return response.json()
     except requests.exceptions.RequestException as e:
