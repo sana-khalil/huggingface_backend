@@ -7,9 +7,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="FastAPI Hugging Face NLP")
 
-# Define a Pydantic model for validation
 class TextRequest(BaseModel):
-    text: str  # Expect a field named 'text' of type string
+    text: str
 
 # Add CORS middleware
 app.add_middleware(
